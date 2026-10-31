@@ -113,8 +113,18 @@ export const NewsletterForm: React.FC<NewsletterFormProps> = ({ inputRef }) => {
               We've reserved your opening access for <strong className="text-slate-800">{vipMember.email}</strong>.
             </p>
 
+            {/* Official Coupon Image in Confirmed State */}
+            <div className="my-5 max-w-md sm:max-w-lg mx-auto filter drop-shadow-md">
+              <img
+                src="/assets/aistudio/Unknown-2_9b36e86d.png"
+                alt="Highway To Music ₹1,000 Off Official Gift Card Voucher"
+                className="w-full h-auto object-contain block mx-auto"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
             {/* Voucher Badge */}
-            <div className="mt-5 inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-purple-200 shadow-2xs">
+            <div className="mt-3 inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white border border-purple-200 shadow-2xs">
               <div className="text-left">
                 <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                   ₹1,000 Early Bird Code
@@ -168,6 +178,18 @@ export const NewsletterForm: React.FC<NewsletterFormProps> = ({ inputRef }) => {
             <p className="text-sm text-slate-600 mt-2 max-w-md mx-auto">
               Join Indian musicians waiting for opening day. Get launch alerts and an exclusive ₹1,000 early bird credit.
             </p>
+
+            {/* Highway To Music Official Coupon Voucher Ticket */}
+            <div className="my-7 max-w-xl sm:max-w-2xl mx-auto">
+              <div className="transition-transform duration-300 hover:scale-[1.02] filter drop-shadow-xl hover:drop-shadow-2xl">
+                <img
+                  src="/assets/aistudio/Unknown-2_9b36e86d.png"
+                  alt="Highway To Music ₹1,000 Off Official Gift Card Voucher"
+                  className="w-full h-auto object-contain block mx-auto"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
 
             {/* Seamless Single-Line Input Form */}
             <form onSubmit={handleSubmit} className="mt-6 max-w-lg mx-auto">
