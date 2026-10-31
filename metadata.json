@@ -1,0 +1,6 @@
+{
+  "name": "Highway To Music | Coming Soon",
+  "description": "Official coming soon page for Highway To Music, India's No. 1 Music Store launching 26 January 2027. Featuring big countdown timer, newsletter VIP signup, and community channels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
