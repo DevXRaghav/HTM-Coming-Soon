@@ -1,0 +1,8 @@
+# https://highwaytomusic.com/robots.txt
+# Highway to Music - India's Premier Music Store (Launching 26 January 2027)
+
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://highwaytomusic.com/sitemap.xml
