@@ -134,40 +134,102 @@ export const SocialLinks: React.FC = () => {
           </p>
         </div>
 
-        {/* Logos in One Single Line Container */}
-        <div className="inline-flex items-center justify-center gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 rounded-2xl bg-purple-50/60 border border-purple-100 shadow-xs max-w-full overflow-x-auto">
-          {SOCIALS.map((item) => (
-            <a
-              key={item.name}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Follow Highway To Music on ${item.name} (${item.handle})`}
-              title={`${item.name}: ${item.handle}`}
-              className={`group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white border border-purple-200/80 shadow-2xs transition-all duration-200 hover:scale-110 active:scale-95 shrink-0 ${item.hoverBorder} ${item.bgColor} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#601BF4]`}
-            >
-              {renderIcon(item.icon)}
-            </a>
-          ))}
+        {/* Logos in One Single Line Container - Beautiful & Mobile Friendly */}
+        <div className="inline-flex items-center justify-center gap-1.5 sm:gap-3 md:gap-4 p-1.5 sm:p-3 rounded-2xl sm:rounded-3xl bg-white border border-purple-100 shadow-sm max-w-full">
+          {/* Instagram */}
+          <a
+            href="https://instagram.com/Highwaytomusicofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Highway To Music on Instagram (@Highwaytomusicofficial)"
+            title="Instagram: @Highwaytomusicofficial"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#fdf497] via-[#fd5949] to-[#d6249f] p-[1.5px] shadow-2xs hover:shadow-md hover:shadow-pink-500/20 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <div className="w-full h-full bg-white group-hover:bg-transparent rounded-[10px] sm:rounded-[14px] flex items-center justify-center transition-colors">
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6 text-[#d6249f] group-hover:text-white transition-colors" />
+            </div>
+          </a>
 
-          {/* Quick Share with Bandmates Button inline */}
-          <div className="h-8 w-px bg-purple-200 mx-1 shrink-0" aria-hidden="true" />
+          {/* YouTube */}
+          <a
+            href="https://youtube.com/@Highwaytomusicofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Subscribe to Highway To Music on YouTube"
+            title="YouTube: @Highwaytomusicofficial"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-[#FF0000]/10 hover:bg-[#FF0000] border border-[#FF0000]/20 hover:border-[#FF0000] shadow-2xs hover:shadow-md hover:shadow-red-500/25 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <Youtube className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF0000] group-hover:text-white transition-colors" />
+          </a>
+
+          {/* X (Twitter) */}
+          <a
+            href="https://x.com/Highwaytomusicofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Highway To Music on X"
+            title="X (Twitter): @Highwaytomusicofficial"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-slate-900/5 hover:bg-black border border-slate-200 hover:border-black shadow-2xs hover:shadow-md hover:shadow-black/20 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <Twitter className="w-5 h-5 sm:w-6 sm:h-6 text-slate-800 group-hover:text-white transition-colors" />
+          </a>
+
+          {/* Spotify */}
+          <a
+            href="https://open.spotify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Highway To Music Playlists on Spotify"
+            title="Spotify: Highway To Music"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-[#1DB954]/10 hover:bg-[#1DB954] border border-[#1DB954]/20 hover:border-[#1DB954] shadow-2xs hover:shadow-md hover:shadow-emerald-500/25 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <Music className="w-5 h-5 sm:w-6 sm:h-6 text-[#1DB954] group-hover:text-white transition-colors" />
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://chat.whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join Indian Musicians Greenroom on WhatsApp"
+            title="WhatsApp: Musicians Greenroom"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 hover:border-[#25D366] shadow-2xs hover:shadow-md hover:shadow-green-500/25 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366] group-hover:text-white transition-colors" />
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://facebook.com/Highwaytomusicofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Like Highway To Music on Facebook"
+            title="Facebook: @Highwaytomusicofficial"
+            className="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-xl sm:rounded-2xl bg-[#1877F2]/10 hover:bg-[#1877F2] border border-[#1877F2]/20 hover:border-[#1877F2] shadow-2xs hover:shadow-md hover:shadow-blue-500/25 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0"
+          >
+            <Facebook className="w-5 h-5 sm:w-6 sm:h-6 text-[#1877F2] group-hover:text-white transition-colors" />
+          </a>
+
+          {/* Subtle Vertical Divider */}
+          <div className="h-6 sm:h-7 w-px bg-purple-200/80 mx-0.5 sm:mx-1 shrink-0" aria-hidden="true" />
+
+          {/* Quick Share with Bandmates Button */}
           <button
             type="button"
             onClick={handleShare}
             aria-label="Share Highway To Music launch with bandmates"
             title={copiedLink ? 'Link Copied!' : 'Share with Bandmates'}
-            className="flex items-center gap-2 px-3.5 sm:px-4 h-12 sm:h-14 rounded-xl bg-white hover:bg-purple-100/70 border border-purple-200/80 text-[#601BF4] font-bold text-xs sm:text-sm shadow-2xs transition-all duration-200 hover:scale-105 active:scale-95 shrink-0 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#601BF4]"
+            className="flex items-center justify-center gap-1.5 px-2.5 sm:px-3.5 h-10 sm:h-12 md:h-13 rounded-xl sm:rounded-2xl bg-purple-50 hover:bg-[#601BF4] border border-purple-200/80 hover:border-[#601BF4] text-[#601BF4] hover:text-white font-bold text-xs shadow-2xs hover:shadow-md hover:shadow-purple-600/20 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shrink-0 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#601BF4]"
           >
             {copiedLink ? (
               <>
-                <Check className="w-4 h-4 text-emerald-600" />
-                <span className="text-emerald-700">Copied!</span>
+                <Check className="w-4 h-4 text-emerald-600 group-hover:text-white" />
+                <span className="text-[11px] sm:text-xs">Copied!</span>
               </>
             ) : (
               <>
                 <Share2 className="w-4 h-4" />
-                <span className="hidden sm:inline">Share</span>
+                <span className="hidden sm:inline text-xs">Share</span>
               </>
             )}
           </button>

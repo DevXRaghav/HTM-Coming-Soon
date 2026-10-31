@@ -105,51 +105,51 @@ export const CountdownBanner: React.FC<CountdownBannerProps> = ({ onJoinVIPClick
           </p>
         </div>
 
-        {/* Big Countdown Timer Card / Banner */}
-        <div className="relative max-w-5xl mx-auto mt-8 sm:mt-12 rounded-3xl bg-gradient-to-b from-[#1C0938] to-[#120425] p-6 sm:p-10 lg:p-12 text-white shadow-2xl shadow-purple-950/30 border border-purple-500/20">
+        {/* Big Countdown Timer Card / Banner - Mobile Optimized */}
+        <div className="relative max-w-5xl mx-auto mt-6 sm:mt-12 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#1C0938] to-[#120425] p-4 sm:p-8 lg:p-12 text-white shadow-xl sm:shadow-2xl shadow-purple-950/30 border border-purple-500/20">
           {/* Subtle Stage Glow within banner */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 bg-[#601BF4]/30 blur-2xl pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 sm:h-28 bg-[#601BF4]/30 blur-2xl pointer-events-none" />
 
           {/* Banner Header Info */}
-          <div className="relative flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b border-purple-800/40">
-            <div className="flex items-center gap-3 text-center sm:text-left">
-              <div className="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-400/30 flex items-center justify-center shrink-0 text-purple-300">
-                <BellRing className="w-5 h-5 animate-bounce" />
+          <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-8 border-b border-purple-800/40 w-full">
+            <div className="flex items-center gap-2.5 sm:gap-3 text-left w-full sm:w-auto">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-purple-600/30 border border-purple-400/30 flex items-center justify-center shrink-0 text-purple-300">
+                <BellRing className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" />
               </div>
-              <div>
-                <h2 className="text-lg font-bold tracking-tight text-white">
+              <div className="min-w-0 flex-1">
+                <h2 className="text-sm sm:text-lg font-bold tracking-tight text-white leading-tight">
                   Official Launch Countdown
                 </h2>
-                <div className="flex items-center gap-2 text-xs text-purple-200/80">
-                  <span>Target Date: 26 January 2027</span>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-xs text-purple-200/80 mt-0.5">
+                  <span>26 January 2027</span>
                   <span aria-hidden="true">·</span>
-                  <span>Republic Day Premiere</span>
-                  <span aria-hidden="true">·</span>
-                  <span>10:00 AM IST</span>
+                  <span>Republic Day</span>
+                  <span aria-hidden="true" className="hidden sm:inline">·</span>
+                  <span className="hidden sm:inline">10:00 AM IST</span>
                 </div>
               </div>
             </div>
 
             {/* Soundcheck & Remind Me Buttons */}
-            <div className="flex items-center gap-3 flex-wrap justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-between sm:justify-end">
               <button
                 type="button"
                 onClick={handleSoundcheck}
-                className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-purple-100 border border-white/15 transition-colors active:scale-95 focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-purple-100 border border-white/15 transition-colors active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none"
                 title="Hear our opening soundcheck chord"
               >
-                <Volume2 className={`w-4 h-4 ${soundPlaying ? 'text-amber-400 animate-spin' : 'text-purple-300'}`} />
-                <span>{soundPlaying ? 'Playing Chord...' : 'Soundcheck Riff'}</span>
+                <Volume2 className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${soundPlaying ? 'text-amber-400 animate-spin' : 'text-purple-300'}`} />
+                <span>{soundPlaying ? 'Playing...' : 'Soundcheck'}</span>
               </button>
 
-              <div className="relative">
+              <div className="relative flex-1 sm:flex-initial">
                 <button
                   type="button"
                   onClick={() => setCalendarMenuOpen(!calendarMenuOpen)}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#601BF4] hover:bg-[#7227FE] text-white transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-[#601BF4] hover:bg-[#7227FE] text-white transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none shadow-sm whitespace-nowrap"
                 >
-                  <Calendar className="w-4 h-4" />
-                  <span>Add Reminder</span>
+                  <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>Remind Me</span>
                 </button>
 
                 {calendarMenuOpen && (
@@ -182,73 +182,73 @@ export const CountdownBanner: React.FC<CountdownBannerProps> = ({ onJoinVIPClick
           </div>
 
           {/* Big Digital Countdown Grid */}
-          <div className="relative py-8 sm:py-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="relative py-5 sm:py-10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6">
               {/* DAYS */}
-              <div className="group relative rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-4 sm:p-6 text-center transition-all duration-300">
-                <div className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
+              <div className="group relative rounded-xl sm:rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-3 sm:p-5 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[96px] sm:min-h-[124px]">
+                <div className="text-3xl sm:text-5xl lg:text-6xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
                   {String(time.days).padStart(2, '0')}
                 </div>
-                <div className="mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-purple-300/90">
+                <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-purple-300/90">
                   Days
                 </div>
-                <span className="block text-[11px] text-purple-400/60 mt-1">
-                  Until Grand Opening
+                <span className="block text-[10px] text-purple-400/70 mt-0.5">
+                  Until Launch
                 </span>
               </div>
 
               {/* HOURS */}
-              <div className="group relative rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-4 sm:p-6 text-center transition-all duration-300">
-                <div className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
+              <div className="group relative rounded-xl sm:rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-3 sm:p-5 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[96px] sm:min-h-[124px]">
+                <div className="text-3xl sm:text-5xl lg:text-6xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
                   {String(time.hours).padStart(2, '0')}
                 </div>
-                <div className="mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-purple-300/90">
+                <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-purple-300/90">
                   Hours
                 </div>
-                <span className="block text-[11px] text-purple-400/60 mt-1">
-                  Indian Standard Time
+                <span className="block text-[10px] text-purple-400/70 mt-0.5">
+                  IST Hours
                 </span>
               </div>
 
               {/* MINUTES */}
-              <div className="group relative rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-4 sm:p-6 text-center transition-all duration-300">
-                <div className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
+              <div className="group relative rounded-xl sm:rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-purple-400/40 p-3 sm:p-5 text-center transition-all duration-300 flex flex-col items-center justify-center min-h-[96px] sm:min-h-[124px]">
+                <div className="text-3xl sm:text-5xl lg:text-6xl font-bold font-mono-numbers tracking-tight text-white drop-shadow-md">
                   {String(time.minutes).padStart(2, '0')}
                 </div>
-                <div className="mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-purple-300/90">
+                <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-purple-300/90">
                   Minutes
                 </div>
-                <span className="block text-[11px] text-purple-400/60 mt-1">
-                  Real-time Synced
+                <span className="block text-[10px] text-purple-400/70 mt-0.5">
+                  Live Synced
                 </span>
               </div>
 
               {/* SECONDS */}
-              <div className="group relative rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-purple-500/30 p-4 sm:p-6 text-center transition-all duration-300 ring-1 ring-purple-500/20">
-                <div className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono-numbers tracking-tight text-purple-200 drop-shadow-md">
+              <div className="group relative rounded-xl sm:rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-purple-500/30 p-3 sm:p-5 text-center transition-all duration-300 ring-1 ring-purple-500/20 flex flex-col items-center justify-center min-h-[96px] sm:min-h-[124px]">
+                <div className="text-3xl sm:text-5xl lg:text-6xl font-bold font-mono-numbers tracking-tight text-purple-200 drop-shadow-md">
                   {String(time.seconds).padStart(2, '0')}
                 </div>
-                <div className="mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-purple-300">
+                <div className="mt-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-purple-300">
                   Seconds
                 </div>
-                <span className="block text-[11px] text-purple-300/70 mt-1">
+                <span className="block text-[10px] text-purple-300/80 mt-0.5">
                   Ticking Live
                 </span>
               </div>
             </div>
 
             {/* Launch Highway Progress Bar */}
-            <div className="mt-8 pt-6 border-t border-purple-800/30">
-              <div className="flex items-center justify-between text-xs text-purple-300 mb-2">
+            <div className="mt-5 sm:mt-8 pt-4 sm:pt-6 border-t border-purple-800/30">
+              <div className="flex items-center justify-between text-[11px] sm:text-xs text-purple-300 mb-1.5 sm:mb-2">
                 <span className="font-medium flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-400" />
-                  Launch Preparations in Progress
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                  Launch Progress
                 </span>
                 <span className="font-mono-numbers font-semibold">
                   {progressPercent.toFixed(1)}% Road Travelled
                 </span>
               </div>
-              <div className="w-full h-2.5 bg-purple-950/80 rounded-full overflow-hidden border border-purple-800/40 p-0.5">
+              <div className="w-full h-2 sm:h-2.5 bg-purple-950/80 rounded-full overflow-hidden border border-purple-800/40 p-0.5">
                 <div
                   className="h-full bg-gradient-to-r from-purple-500 via-indigo-400 to-[#A855F7] rounded-full transition-all duration-1000 shadow-sm shadow-purple-500/50"
                   style={{ width: `${Math.max(5, progressPercent)}%` }}
@@ -258,18 +258,18 @@ export const CountdownBanner: React.FC<CountdownBannerProps> = ({ onJoinVIPClick
           </div>
 
           {/* Quick Call to Action inside Banner */}
-          <div className="relative pt-6 border-t border-purple-800/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-xs sm:text-sm text-purple-200 text-center sm:text-left">
-              <span className="font-bold text-white">Join 24,000+ Indian musicians</span> waiting for launch day access & ₹1,000 opening voucher.
+          <div className="relative pt-4 sm:pt-6 border-t border-purple-800/40 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <div className="text-[11px] sm:text-xs lg:text-sm text-purple-200 text-center sm:text-left">
+              <span className="font-bold text-white">Join 24,000+ Indian musicians</span> waiting for opening day vouchers.
             </div>
 
             <button
               type="button"
               onClick={onJoinVIPClick}
-              className="inline-flex items-center gap-2 px-6 py-2.5 text-xs sm:text-sm font-bold text-slate-900 bg-white hover:bg-purple-50 active:bg-purple-100 rounded-xl transition-all shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap shrink-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-bold text-slate-900 bg-white hover:bg-purple-50 active:bg-purple-100 rounded-xl transition-all shadow-md focus-visible:outline-none whitespace-nowrap shrink-0"
             >
               <span>Reserve Your VIP Spot</span>
-              <ArrowDown className="w-4 h-4 text-[#601BF4]" />
+              <ArrowDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#601BF4]" />
             </button>
           </div>
         </div>
